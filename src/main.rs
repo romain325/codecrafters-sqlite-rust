@@ -23,7 +23,7 @@ fn main() -> Result<()> {
             #[allow(unused_variables)]
             let page_size = u16::from_be_bytes([header[16], header[17]]);
 
-            println!("database page size {}", page_size);
+            println!("database page size: {}", page_size);
         }
         _ => bail!("Missing or invalid command passed: {}", command),
     }
